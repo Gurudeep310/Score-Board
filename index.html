@@ -702,17 +702,17 @@ function closeChatWithPuff() {
     document.getElementById(sectionId).classList.remove('hidden');
   }
 
-  function addPlayer() {chat
-    let name = document.getElementById("playerName").value.trim();
-    let score = parseInt(document.getElementById("playerScore").value) || 0;
-    if (!name) { alert("Please enter a valid player name."); return; }
-    let newPlayer = { id: playerIdCounter++, name: name, score: score };
-    players.push(newPlayer);
-    totalScore += score;
-    saveAndUpdate();
-    document.getElementById("playerName").value = "";
-    document.getElementById("playerScore").value = "";
-  }
+  function addPlayer() {
+      let name = document.getElementById("playerName").value.trim();
+      let score = parseInt(document.getElementById("playerScore").value) || 0;
+      if (!name) { alert("Please enter a valid player name."); return; }
+      let newPlayer = { id: playerIdCounter++, name: name, score: score };
+      players.push(newPlayer);
+      totalScore += score;
+      saveAndUpdate();
+      document.getElementById("playerName").value = "";
+      document.getElementById("playerScore").value = "";
+    }
 
   function adjustTotalScore() {
     let newScore = parseInt(document.getElementById("adjustTotalScore").value);
